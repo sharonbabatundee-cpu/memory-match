@@ -1,0 +1,58 @@
+<!-- MEMORY MATCH HTML
+Author: [Sharon Babatunde]
+Date: March 16th 2026
+Description: HTML structures a Memory Match card game with a splash screen, game interface,
+and end screen, while linking external CSS for styling and JavaScript -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+     <div id="splashScreen">
+        <canvas id="splashCanvas" width="300" height="200"></canvas>
+        <button id="startBtn">START</button>
+    </div>
+
+    <div id="gameScreen" style="display:none;">
+        <h2>Memory Match!</h2>
+        <p>Try to find the matching pairs. Good luck!</p>
+        <button id="helpBtn"> Help </button>
+        <div id="scoreboard">
+            Score: <span id="score">0</span>
+            <br>
+            Moves: <span id="moves">0</span>
+        </div>
+        <progress id="progressBar" value="0" max="8"></progress>
+        <div id="board"></div>
+        <div id="helpText" style="display: none;">
+            <h3>How to Play</h3>
+            <ul>
+                <li>Click on a card to flip it over.</li>
+                <li>Try to find the matching card pair.</li>
+                <li>If the two cards match, they stay face up.</li>
+                <li>If they don't match, they flip back over.</li>
+                <li>Track your moves and see your progress.</li>
+                <li>Find all the pairs to win the game!</li>
+            </ul>
+            <p>Tip: Remember where the cards are to find matches faster!!!!</p>
+        </div>
+
+        
+        </div>
+    </div>
+
+    <div id="endScreen" style="display:none;">
+        <h2>Game Over!</h2>
+        <p>Your final score is: <span id="finalScore">0</span></p>
+        <p>Moves Taken: <span id="finalMoves">0</span></p>
+        <div id="history"></div>
+        <button id="playAgainBtn">Play Again</button>
+    </div>
+</body>
+</html>
